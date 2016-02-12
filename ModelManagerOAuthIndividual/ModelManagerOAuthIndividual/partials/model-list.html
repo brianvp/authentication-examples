@@ -1,0 +1,38 @@
+﻿<section id="content">
+    <div class="container">
+        <div class="row">
+            <a href="#/new">Add Model</a>
+        </div>
+        <div class="row">
+            <table class="table" ng-controller="ModelListCtrl">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Manufacturer</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Manufacturer Code</th>
+                        <th>Model Name</th>
+                        <th>Description</th>
+                        <th>List Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="model in models">
+                        <td><a href="#/{{model.ModelId}}">Details</a></td>
+                        <td>{{model.ManufacturerName}}</td>
+                        <td>{{model.CategoryName}}</td>
+                        <td>{{model.StatusName}}</td>
+                        <td>{{model.ManufacturerCode}}</td>
+                        <td>{{model.ModelName}}</td>
+                        <td>{{model.Description}}</td>
+                        <td>{{model.ListPrice}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</section>

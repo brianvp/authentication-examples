@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ModelManagerOAuthIndividual.Models.Model>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Model Manager - MVC</h2>
+
+<p>(MVC Controller - > Entity Framework Class)</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManufacturerCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Features)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ListPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufacturer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManufacturerCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Features)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ModelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ModelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ModelId })
+        </td>
+    </tr>
+}
+
+</table>

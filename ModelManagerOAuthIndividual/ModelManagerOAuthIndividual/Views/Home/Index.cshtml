@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Demonstration of ASP.Net Identity database + oauth authentication</h2>
+
+<p>Must be logged in to access the following routes </p>
+
+<ul>
+    <li>/ModelEditor/</li> 
+    <li>/ModelEditorAngular/</li> 
+    <li>/api/Models/</li> 
+</ul>
+
+
+<p>Must be logged in with an account in the ModelEditorRole to access</p>
+<ul>
+    <li>/ModelEditor/Edit/</li> 
+    <li>/ModelEditorAngular/ (this will allow the user to perform edit actions, but changes will not be applied unless user has the ModelEditorRole)</li> 
+
+</ul>
+    
+<p><strong>login:</strong> basicuser@modelmanager.com <strong>pass:</strong> 1234#abcD</p>
+<p><strong>login:</strong> advanceduser@modelmanager.com <strong>pass:</strong> 1234#abcD (member of ModelEditorRole)</p>
+<p>May also log in with your Google Account</p>
+<p>This site will work in HTTP and HTTPS mode, but the API calls require HTTPS</p>

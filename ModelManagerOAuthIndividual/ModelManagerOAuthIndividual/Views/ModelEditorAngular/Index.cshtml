@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Model Manager - AngularJS</h2>
+
+<p>(Angular Controller - > AJAX - > ASP.NET Web API)</p>
+
+<div id="bodyContainer" ng-app="ModelManagerApp">
+    <div ng-view></div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/angular-route.js")
+    @Scripts.Render("~/Scripts/app/model-controller.js")
+    
+    }
