@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Demonstration of On-Premises ADFS authentication</h2>
+
+<p>Must be logged in to access the following routes </p>
+
+<ul>
+    <li>/ModelEditor/</li>
+    <li>/ModelEditorAngular/</li>
+    <li>/api/Models/</li>
+</ul>
+
+
+
+<p>Must be logged in with an account in the ModelEditorRole to access</p>
+<ul>
+    <li>/ModelEditor/Edit/</li>
+    <li>/ModelEditorAngular/ (this will allow the user to perform edit actions, but changes will not be applied unless user has the ModelEditorRole)</li>
+
+</ul>
+
+<p>This site will work in HTTP and HTTPS mode, but the API calls require HTTPS</p>
+
+<a href="https://adfs.vpinc.net/adfs/ls/?wtrealm=https%3a%2f%2flocalhost%3a44300%2f&wa=wsignout1.0">ADFS sign out URL (localhost)</a>
+
+<h3>Logged in User Claims:</h3>
+<table class="table table-condensed">
+    <tr>
+        <th>Claim Type</th>
+        <th>Claim Value</th>
+        <th>Value Type</th>
+        <th>Subject Name</th>
+        <th>Issuer Name</th>
+    </tr>
+    @foreach(System.Security.Claims.Claim claim in ViewBag.ClaimsIdentity.Claims)
+    {
+        <tr>
+            <td><small>@claim.Type</small></td>
+            <td><small>@claim.Value</small></td>
+            <td><small>@claim.ValueType</small></td>
+            <td><small>@claim.Subject.Name</small></td>
+            <td><small>@claim.Issuer</small></td>
+        </tr>
+    }
+</table>
