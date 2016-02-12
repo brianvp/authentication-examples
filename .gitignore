@@ -212,3 +212,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 ModelManagerOAuthIndividual/ModelManagerOAuthIndividual/Properties/PublishProfiles/ModelManagerOAuthIndividual20160114.pubxml
 ModelManagerOAuthIndividual/ModelManagerOAuthIndividual/secrets.config
+ModelManagerADFS/ModelManagerADFS/Properties/PublishProfiles/ModelManagerADFS20160128.pubxml
